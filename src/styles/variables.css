@@ -1,0 +1,27 @@
+/*
+ * DX-CHAT 默认 CSS 变量
+ *
+ * 如果引用方没有定义这些变量（如 ZERO），
+ * 这些默认值会生效。
+ *
+ * 如果引用方定义了同名变量（如 Insight），
+ * 引用方的值会覆盖这里的默认值。
+ */
+:root {
+  --dx-primary-color: #1677ff;
+  --dx-gradient-primary: linear-gradient(135deg, #667eea 0%, #5b86e5 100%);
+  --dx-bg-active: rgba(22, 119, 255, 0.08);
+  --dx-border-color: #e0e0e0;
+  --dx-bg-component: #ffffff;
+}
+
+/* 兼容 Insight 的变量名 */
+:root {
+  --primary-color: var(--primary-color, var(--dx-primary-color));
+  --gradient-primary: var(--gradient-primary, var(--dx-gradient-primary));
+  --bg-active: var(--bg-active, var(--dx-bg-active));
+  --bg-component: var(--bg-component, var(--dx-bg-component));
+  --border-color: var(--border-color, var(--dx-border-color));
+  --total-header-height: var(--total-header-height, 64px);
+  --content-padding: var(--content-padding, 20px);
+}
